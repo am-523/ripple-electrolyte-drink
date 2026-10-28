@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ripple Hydration™ — Refresh More. Feel Better.</title>
+  <meta name="description" content="Ripple Hydration™ — Clean mineral electrolyte drink designed to keep you energized, refreshed, and ready for every moment. No artificial sugar, 100% clean ingredients.">
+
+  <!-- Preload First Frame -->
+  <link rel="preload" as="image" href="/asset/0001.jpg">
+
+  <!-- Google Font: Inter ONLY -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="site-body">
+
+  <!-- MINIMAL CLEAN PRELOADER -->
+  <div id="preloader" class="preloader" aria-live="polite">
+    <div class="preloader-box">
+      <div class="preloader-header">
+        <span class="preloader-brand">Ripple Hydration™</span>
+        <span id="loading-pct" class="preloader-pct">0%</span>
+      </div>
+      <div class="preloader-track">
+        <div id="loading-bar" class="preloader-bar"></div>
+      </div>
+      <div id="loading-status" class="preloader-note">Preparing 500-frame experience...</div>
+    </div>
+  </div>
+
+  <!-- FLOATING MINIMAL FROSTED NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="navbar-container">
+      
+      <!-- BRAND LOGO -->
+      <a href="#" class="nav-logo" aria-label="Ripple Hydration Home">
+        <span class="logo-bold">Ripple</span>
+        <span class="logo-light">Hydration™</span>
+      </a>
+
+      <!-- NAV MENU -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <button class="nav-item active" data-target="#act-0">Overview</button>
+        <button class="nav-item" data-target="#act-1">Ingredients</button>
+        <button class="nav-item" data-target="#act-2">Lifestyle</button>
+        <button class="nav-item" data-target="#act-3">Flavors</button>
+      </nav>
+
+      <!-- CTA ACTION -->
+      <div class="nav-actions">
+        <button id="cta-shop" class="nav-cta-btn">Shop Ripple</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- FIXED FULL-SCREEN 500-FRAME BACKGROUND CANVAS -->
+  <div class="canvas-fixed-viewport" aria-hidden="true">
+    <canvas id="drink-canvas" class="drink-canvas" width="1280" height="720" aria-label="3D Ripple Electrolyte Can Animation"></canvas>
+    <div class="hero-scrim"></div>
+  </div>
+
+  <!-- NATURAL VERTICAL SCROLL STREAM -->
+  <main id="main-content" class="story-stream">
+
+    <!-- ACT 1: REFRESH MORE (0% - 25%) -->
+    <section class="story-section" id="act-0">
+      <div class="story-content">
+        <h1 class="story-heading">Refresh more.<br>Feel better.</h1>
+        <p class="story-desc">
+          Thoughtfully crafted electrolyte hydration designed to keep you energized, refreshed, and ready for every moment of your day.
+        </p>
+        <div class="story-cta-row">
+          <button class="hero-cta-btn" onclick="document.querySelector('#act-3').scrollIntoView({behavior: 'smooth'})">
+            <span>Explore Flavors</span>
+            <span class="cta-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACT 2: CLEAN INGREDIENTS (25% - 50%) -->
+    <section class="story-section" id="act-1">
+      <div class="story-content">
+        <h2 class="story-heading">Ingredients you can<br>actually pronounce.</h2>
+        <p class="story-desc">
+          We believe hydration should feel as enjoyable as your favorite drink — without unnecessary sugar, artificial dyes, or chemical fillers.
+        </p>
+      </div>
+    </section>
+
+    <!-- ACT 3: EVERYDAY ROUTINE (50% - 75%) -->
+    <section class="story-section" id="act-2">
+      <div class="story-content">
+        <h2 class="story-heading">Everyday hydration<br>made simple.</h2>
+        <p class="story-desc">
+          Whether you're working, training, traveling, or simply relaxing, Ripple delivers crisp mineral nourishment that fits naturally into your routine.
+        </p>
+      </div>
+    </section>
+
+    <!-- ACT 4: SMARTER HYDRATION & CTA (75% - 100%) -->
+    <section class="story-section" id="act-3">
+      <div class="story-content">
+        <h2 class="story-heading">Join thousands choosing<br>smarter hydration.</h2>
+        <p class="story-desc">
+          Pure fruit essence with balanced sodium, potassium, and magnesium ratios for maximum absorption and clean daily vitality.
+        </p>
+        <div class="story-cta-row">
+          <button class="hero-cta-btn" onclick="alert('Welcome to Ripple Hydration! 12-Pack Starter Kit added to cart ($5.99/can).')">
+            <span>Order Ripple Pack ($5.99)</span>
+            <span class="cta-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

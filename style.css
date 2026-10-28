@@ -1,0 +1,368 @@
+/* ==========================================================================
+   RIPPLE HYDRATION™ // MODERN ELECTROLYTE DRINK EDITORIAL
+   Pure Inter Typography, Full-Bleed 500-Frame Canvas & Smooth Vertical Stream
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --bg-core: #12100e;
+  --bg-glass: rgba(22, 19, 17, 0.72);
+  --border-subtle: rgba(255, 255, 255, 0.12);
+
+  --text-white: #ffffff;
+  --text-secondary: #c4bcb4;
+  --text-muted: #80776e;
+
+  --accent-orange: #ff7a45;
+  --accent-coral: #ff9559;
+
+  /* Font: Inter Exclusively */
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Motion */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   BASE & RESET
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--bg-core);
+  color: var(--text-white);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body.site-body {
+  background-color: var(--bg-core);
+  color: var(--text-white);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   1. PRELOADER
+   ========================================================================== */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-core);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transition: opacity 0.5s var(--ease-smooth), visibility 0.5s;
+}
+
+.preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-box {
+  width: 100%;
+  max-width: 320px;
+}
+
+.preloader-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.preloader-brand {
+  color: var(--text-white);
+}
+
+.preloader-pct {
+  color: var(--accent-orange);
+  font-weight: 700;
+}
+
+.preloader-track {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.65rem;
+}
+
+.preloader-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-coral));
+  transition: width 0.15s ease-out;
+}
+
+.preloader-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   2. FLOATING CLEAN NAVBAR (FROSTED GLASS)
+   ========================================================================== */
+.navbar {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 0 40px;
+  pointer-events: none;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 54px;
+  pointer-events: auto;
+  background: var(--bg-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: var(--text-white);
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.logo-bold {
+  font-weight: 800;
+}
+
+.logo-light {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  font-family: var(--font-inter);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0.25rem 0;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: var(--text-white);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-cta-btn {
+  background: var(--text-white);
+  color: var(--bg-core);
+  border: none;
+  font-family: var(--font-inter);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-cta-btn:hover {
+  background: var(--accent-orange);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   3. FIXED FULL-SCREEN CANVAS VIEWPORT
+   ========================================================================== */
+.canvas-fixed-viewport {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+  background-color: var(--bg-core);
+}
+
+.drill-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Soft Left Ambient Scrim for Crisp Text Readability */
+.hero-scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 62vw;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    90deg, 
+    rgba(18, 16, 14, 0.94) 0%, 
+    rgba(18, 16, 14, 0.72) 45%, 
+    rgba(18, 16, 14, 0.15) 80%, 
+    transparent 100%
+  );
+}
+
+/* ==========================================================================
+   4. NATURAL VERTICAL SCROLL STREAM (CONTINUOUS TRAVEL TO NAVBAR)
+   ========================================================================== */
+.story-stream {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.story-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: clamp(32px, 7vw, 110px);
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+.story-content {
+  width: clamp(360px, 46vw, 640px);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-heading {
+  font-family: var(--font-inter);
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--text-white);
+}
+
+.story-desc {
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-top: 1.35rem;
+  max-width: 520px;
+}
+
+.story-cta-row {
+  margin-top: 2rem;
+}
+
+.hero-cta-btn {
+  background: var(--text-white);
+  color: var(--bg-core);
+  border: none;
+  font-family: var(--font-inter);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.95rem 1.85rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  transition: all 0.2s ease;
+}
+
+.hero-cta-btn:hover {
+  background: var(--accent-orange);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 122, 69, 0.45);
+}
+
+.cta-arrow {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.hero-cta-btn:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   5. RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 20px;
+    top: 16px;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .story-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .story-content {
+    width: 100%;
+  }
+  .hero-scrim {
+    width: 100vw;
+    background: linear-gradient(
+      180deg, 
+      rgba(18, 16, 14, 0.88) 0%, 
+      rgba(18, 16, 14, 0.7) 50%, 
+      rgba(18, 16, 14, 0.95) 100%
+    );
+  }
+}
